@@ -1,0 +1,569 @@
+17:56:09 From  rimma ryspek  to  Everyone:
+	This is 159
+17:56:11 From  rimma ryspek  to  Everyone:
+	class Main {
+	void m1(int num1, int num2, int num3,int num4){
+	  System.out.println((num1-num2-num3-num4)+ " (should come from subtracting 4 numbers)");
+	}
+	void m1(int num1, int num2, int num3){
+	  System.out.println((num1-num2-num3)+ " (should come from subtracting 3 numbers)");
+	}
+	
+	void m1(int num1, int num2){
+	  System.out.println((num1-num2)+ " (should come from subtracting 2 numbers)");
+	}
+	public static void main(String[] args){
+	  Main obj = new Main();
+	  obj.m1(100,30,20,10);
+	  obj.m1(100,50,20);
+	  obj.m1(100,80);
+	}
+	}
+18:00:58 From  rimma ryspek  to  Everyone:
+	This is 160
+18:01:00 From  rimma ryspek  to  Everyone:
+	class Main {
+	void display(int a){
+	  System.out.println(a);
+	}
+	void display(String a){
+	  System.out.println(a);
+	}
+	  void display(double a){
+	  System.out.println(a);
+	}
+	  public static void main (String[] args){
+	    Main obj = new Main();
+	    obj.display(100);
+	    obj.display("Syntax Technologies");
+	    obj.display(100.09);
+	  }
+	}
+18:04:45 From  rimma ryspek  to  Everyone:
+	class Main {
+	private void m1(){
+	  System.out.println("private m1 method ");
+	}
+	private void m1(int xy){
+	  System.out.println("private m1 method with int parameter");
+	}
+	public static void main (String [] args){
+	  Main obj=new Main();
+	  obj.m1();
+	  obj.m1(12);
+	}
+	}
+18:04:49 From  rimma ryspek  to  Everyone:
+	161
+18:07:29 From  rimma ryspek  to  Everyone:
+	class Main {
+	  static void m1(){
+	    System.out.println("static method without parameter");
+	  }
+	  static void m1(int ay){
+	    System.out.println("static method with int parameter");
+	  }
+	  
+	  public static void main(String[] args) {
+	    m1();
+	    m1(45);
+	  }
+	}
+18:13:18 From  rimma ryspek  to  Everyone:
+	class Main {
+	public static void main (String [] args){
+	  Parent p = new Parent();
+	  child c= new child();
+	  p.method();
+	  c.method();
+	}
+	}
+18:13:28 From  rimma ryspek  to  Everyone:
+	class Parent{
+	  void method(){
+	    System.out.println("Parent method");
+	  }
+	}
+18:13:38 From  rimma ryspek  to  Everyone:
+	class child extends Parent{
+	  void method(){
+	    System.out.println("Child method");
+	  }
+	}
+18:13:45 From  rimma ryspek  to  Everyone:
+	163
+18:21:31 From  rimma ryspek  to  Everyone:
+	class Main {
+	public static void main(String [] args){
+	  Parent [] c={new Child1(),new Child2(),new Child3()};
+	  for(Parent p:c){
+	    p.hello();
+	  }
+	}
+	}
+	class Parent{
+	  void hello(){
+	    System.out.println("method in Parent class");
+	  }
+	}
+	class Child1 extends Parent{
+	   void hello(){
+	    System.out.println("method in Child1 class");
+	  }
+	}
+	class Child2 extends Parent{
+	  void hello(){
+	    System.out.println("method in Child2 class");
+	  }
+	}
+	class Child3 extends Parent{
+	  void hello(){
+	    System.out.println("method in Child3 class");
+	  }
+	}
+18:21:34 From  rimma ryspek  to  Everyone:
+	164
+18:29:43 From  rimma ryspek  to  Everyone:
+	class Main {
+	  public static void main(String [] args){
+	    Child c = new Child();
+	  c.m1();
+	    c.m2();
+	    c.m3();
+	  }
+	
+	}
+18:29:55 From  rimma ryspek  to  Everyone:
+	class Parent{
+	  public void m1(){
+	    System.out.println("I am parent public");
+	  }
+	 protected void m2(){
+	    System.out.println("I am parent protected");
+	  }
+	 void m3(){
+	    System.out.println("I am parent default");
+	  }
+	  private void m4(){
+	    System.out.println("I am parent private");
+	  }
+	}
+18:30:05 From  rimma ryspek  to  Everyone:
+	class Child{
+	  public void m1(){
+	    System.out.println("I am a child public method");
+	  }
+	 protected void m2(){
+	    System.out.println("I am a child protected method");
+	  }
+	 void m3(){
+	    System.out.println("I am a child default method");
+	  }
+	  
+	}
+18:30:07 From  rimma ryspek  to  Everyone:
+	165
+18:42:48 From  estefani alvares  to  Everyone:
+	okay gugys sadly i have to get going for now but ill try to join in a bit 🙂
+18:43:06 From  Janel  to  Everyone:
+	sure, see you later
+18:45:32 From  rimma ryspek  to  Everyone:
+	class Animal{
+	  String food;
+	 
+	  Animal(String food){
+	    this.food=food;
+	  }
+	void eat(){
+	  System.out.println("Animal eats food");
+	}
+	void sleep(){
+	    System.out.println("Animal sleeps well");
+	}
+	}
+	class Cat extends Animal{
+	  Cat(String food){
+	    super(food);
+	  }
+	void eat(){
+	  System.out.println("Cat eats");
+	  
+	}
+	void sleep(){
+	    System.out.println("Cat sleeps a lot");
+	}
+	
+	}
+18:45:45 From  rimma ryspek  to  Everyone:
+	class kitten1 extends Cat{
+	   kitten1(String food){
+	    super(food);
+	  }
+	void eat(){
+	  System.out.println("kitten1 eats "+ food);
+	  
+	}
+	void sleep(){
+	    System.out.println("kitten1 sleeps a lot");
+	}
+	
+	}
+	class kitten2 extends Cat{
+	   kitten2(String food){
+	    super(food);
+	  }
+	void eat(){
+	  System.out.println("kitten2 eats "+ food);
+	  
+	}
+	void sleep(){
+	    System.out.println("kitten2 sleeps a lot");
+	}
+	
+	}
+	class kitten3 extends Cat{
+	   kitten3(String food){
+	    super(food);
+	  }
+	void eat(){
+	  System.out.println("kitten3 eats "+ food);
+	  
+	}
+	void sleep(){
+	    System.out.println("kitten3 sleeps a lot");
+	}
+	
+	}
+	class Main {
+	  public static void main (String [] args){
+	    Animal [] pet={new Cat("milk"),new kitten1("milk"),new kitten2("snacks"),new kitten3("everything")};
+	    for(Animal arr : pet){
+	      arr.eat();
+	      arr.sleep();
+	    }
+	  }
+	
+	}
+18:45:48 From  rimma ryspek  to  Everyone:
+	166
+18:49:31 From  rimma ryspek  to  Everyone:
+	class Main {
+	  static final String str="[https://syntaxtechs.com](https://syntaxtechs.com/)";
+	  public static void main(String [] args){
+	    System.out.println(str);
+	  }
+	}
+18:49:34 From  rimma ryspek  to  Everyone:
+	167
+19:00:40 From  rimma ryspek  to  Everyone:
+	class Main {
+	 static final String m1(){
+	  String str="hello";
+	  String str1="";
+	  for(int i=str.length()-1;i>=0;i--){
+	    str1+=str.charAt(i);
+	  }
+	  return str1;
+	}
+	  public static void main (String[] args){
+	    
+	    System.out.println(m1());
+	  }
+	}
+19:00:42 From  rimma ryspek  to  Everyone:
+	168
+19:08:12 From  rimma ryspek  to  Everyone:
+	class Main {
+	 static final double avgElements(int [] arr){
+	double sum=0.0;
+	int len=arr.length;;
+	    for(int i=0; i<len; i++){
+	      sum+=arr[i];
+	    }
+	    return sum/len;
+	  }
+		public static void main(String[] args) {
+			int[] a = {2,7,3,8,4};
+			System.out.println(avgElements(a)); //should print 4.8
+		}
+	}
+19:08:16 From  rimma ryspek  to  Everyone:
+	169
+19:12:43 From  rimma ryspek  to  Everyone:
+	class Main {
+	static final void m1(boolean x){
+	System.out.println("Final method with boolean parameter");
+	}
+	static final void m1(String x){
+	System.out.println("Final method with String parameter");
+	}
+	  public static void main ( String [] args){
+	    Main m = new Main();
+	    m.m1(true);
+	    m.m1("rr");
+	  }
+	}
+19:12:46 From  rimma ryspek  to  Everyone:
+	170
+19:19:44 From  rimma ryspek  to  Everyone:
+	abstract class Parent{
+	abstract void m1();
+	abstract void m1(int j);
+	}
+	
+	class Main extends Parent {
+	  void m1 (){
+	    System.out.println("m1 without parameters");
+	  }
+	 void m1 (int j){
+	    System.out.println("m1 method with parameter");
+	  }
+	  
+	  public static void main ( String [] args){
+	     Main m = new Main();
+	    m.m1();
+	    m.m1(34);
+	  }
+	
+	}
+19:19:48 From  rimma ryspek  to  Everyone:
+	171
+19:24:43 From  rimma ryspek  to  Everyone:
+	abstract class Parent{
+	  abstract void m1();
+	  void m2(){
+	    System.out.println("Parent class providing implementation");
+	  }
+	}
+19:24:54 From  rimma ryspek  to  Everyone:
+	class Main extends Parent{
+	void m1(){
+	  System.out.println("Child class providing implementation");
+	  
+	}
+	  public static void main(String[] args){
+	    Main m = new Main();
+	    m.m1();
+	    m.m2();
+	  }
+	  
+	}
+19:24:56 From  rimma ryspek  to  Everyone:
+	172
+19:36:13 From  rimma ryspek  to  Everyone:
+	abstract class Tea{
+	  String teaType;
+	  Tea(String teaType){
+	    this.teaType=teaType;
+	  }
+	abstract void addSugar();
+	}
+	class LemonTea extends Tea{
+	   LemonTea(String teaType){
+	    super(teaType);
+	  }
+	  void addSugar(){
+	    System.out.println("For "+teaType+" we need 2 spoons of sugar");
+	  }
+	}
+	class ChaiTea extends Tea{
+	   ChaiTea(String teaType){
+	  super(teaType);
+	  }
+	  void addSugar(){
+	    System.out.println("For "+teaType+" we need 1 spoon of sugar");
+	  }
+	}
+	class Main {
+	  public static void main(String [] args){
+	    Tea[]arr = {new LemonTea("Lemon Tea"),new ChaiTea("Chai Tea")};
+	    for(Tea chai:arr){
+	      chai.addSugar();
+	    }
+	  }
+	}
+19:36:17 From  rimma ryspek  to  Everyone:
+	173
+19:43:38 From  rimma ryspek  to  Everyone:
+	class Main implements MyInterface{
+	  public void method1(){
+	    System.out.println("implementation of method1");
+	  }
+	  public void method2(){
+	    System.out.println("implementation of method2");
+	  }
+	public static void main ( String [] args){
+	  Main m = new Main();
+	  m.method1();
+	  m.method2();
+	}
+	
+	}
+	
+	class Main implements MyInterface{
+	  public void method1(){
+	    System.out.println("implementation of method1");
+	  }
+	  public void method2(){
+	    System.out.println("implementation of method2");
+	  }
+	public static void main ( String [] args){
+	  Main m = new Main();
+	  m.method1();
+	  m.method2();
+	}
+	
+	}
+	
+	class Main implements MyInterface{
+	  public void method1(){
+	    System.out.println("implementation of method1");
+	  }
+	  public void method2(){
+	    System.out.println("implementation of method2");
+	  }
+	public static void main ( String [] args){
+	  Main m = new Main();
+	  m.method1();
+	  m.method2();
+	}
+	
+	}
+19:43:43 From  rimma ryspek  to  Everyone:
+	174
+19:53:21 From  rimma ryspek  to  Everyone:
+	interface FirstInterface{
+	  void firstMethod ();
+	}
+	interface SecondInterface{
+	  void secondMethod ();
+	}
+	
+	class Main implements FirstInterface, SecondInterface {
+	public void firstMethod(){
+	  System.out.println("First Method implementing multiple Inheritance");
+	}
+	  public void secondMethod(){
+	  System.out.println("Second Method implementing multiple Inheritance");
+	  }
+	  public static void main (String [] args){
+	    Main m =new Main();
+	    m.firstMethod();
+	    m.secondMethod();
+	  }
+	}
+19:53:25 From  rimma ryspek  to  Everyone:
+	175
+20:00:22 From  rimma ryspek  to  Everyone:
+	interface ParentInterface {
+	  void parentMethod();
+	}
+	interface ChildInterface extends ParentInterface {
+	  void childMethod();
+	}
+	class Main implements ChildInterface  {
+	  public void parentMethod(){
+	    System.out.println("Parent Method-welcome to Syntax");
+	  }
+	
+	  public void childMethod(){
+	    System.out.println("Child Method-hello Syntax");
+	  }
+	public static void main(String [] args){
+	  Main m =new Main();
+	  m.parentMethod();
+	  m.childMethod();
+	}
+	  
+	}
+20:00:24 From  rimma ryspek  to  Everyone:
+	176
+20:17:20 From  rimma ryspek  to  Everyone:
+	interface Outputs{
+	  void display(double result);
+	}
+	interface Functions extends Outputs {
+	  double adding (double a, double b);
+	  double subtracting (double a, double b);
+	  double multiply (double a, double b);
+	  double dividing (double a, double b);
+	}
+	
+	class Main implements Functions {
+	public void display(double result){
+	  System.out.println("Result is ::: "+ result); 
+	}
+	  public double adding (double a, double b){
+	    return a+b;
+	  }
+	  public double subtracting (double a, double b){
+	    return a-b;
+	  }
+	  public double multiply (double a, double b){
+	    return a*b;
+	  }
+	  public double dividing (double a, double b){
+	    return a/b;
+	  }
+	  public static void main(String [] args){
+	    Main m= new Main();
+	   m.display(m.adding(60, 60)); 
+	   m.display(m.subtracting(180,100)); 
+	   m.display(m.multiply(200,10)); 
+	    m.display(m.dividing(25,5)); 
+	}
+	}
+20:17:24 From  rimma ryspek  to  Everyone:
+	177
+20:22:43 From  Janel  to  Everyone:
+	public class TestCode {	    public static void main(String[] args) throws InterruptedException {	        System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");	        WebDriver driver = new ChromeDriver();	        driver.get("http://google.com");	        String title = driver.getTitle();	        System.out.println(title);	        driver.navigate().to("http://facebook.com");			    }		}
+20:24:22 From  Janel  to  Everyone:
+	ublic class Test2 {	    public static void main(String[] args) {	        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");	        //chromedriver.exe for Windows users		        WebDriver driver = new ChromeDriver(); //launch the browser	        driver.get("https://www.syntaxtechs.com/"); // navigate to url	        String url = driver.getCurrentUrl(); // getting current url	        System.out.println(url);	        String title= driver.getTitle(); // getting title of the page	        System.out.println(title);			    }		}
+20:39:13 From  Abdul Hashimi  to  Everyone:
+	xattr -d com.apple.quarantine <name-of-executable>
+20:39:25 From  Abdul Hashimi  to  Everyone:
+	xattr -d com.apple.quarantine chromedriver
+20:41:11 From  Puskar  to  Everyone:
+	public static void main(String[] args) throws InterruptedException {
+	        System.setProperty("webdriver.chrome.driver","drivers/chromedriver");
+	        WebDriver driver = new ChromeDriver();
+	        driver.get("http://google.com");
+	        String title = driver.getTitle();
+	        System.out.println(title);
+	        driver.navigate().to("http://facebook.com");
+	
+	
+	    }
+20:43:43 From  Abdul Hashimi  to  Everyone:
+	https://chromedriver.storage.googleapis.com/index.html?path=106.0.5249.61/
+21:17:32 From  Puskar  to  Everyone:
+	public static void main(String[] args) throws InterruptedException {
+	        System.setProperty("webdriver.chrome.driver","drivers/chromedriver");
+	        WebDriver driver = new ChromeDriver();
+	        driver.get("http://google.com");
+	        String title = driver.getTitle();
+	        System.out.println(title);
+	        driver.navigate().to("http://facebook.com");
+	
+	
+	    }
+21:57:06 From  Abdul Hashimi  to  Everyone:
+	xattr -d com.apple.quarantine chromedriver
+22:25:05 From  Puskar  to  Everyone:
+	public static void main(String[] args) {
+	        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+	                                                                    //chromedriver.exe for Windows users
+	
+	       WebDriver driver = new ChromeDriver(); //launch the browser
+	       driver.get("https://www.syntaxtechs.com/"); // navigate to url
+	       String url = driver.getCurrentUrl(); // getting current url
+	       System.out.println(url);
+	       String title= driver.getTitle(); // getting title of the page
+	        System.out.println(title);
+	
+	
+	    }
+22:57:37 From  gozturkmen  to  Everyone:
+	Thank you so much for the help guys. I have to leave
+22:57:44 From  Abdul Hashimi  to  Everyone:
+	Ok have a good night
